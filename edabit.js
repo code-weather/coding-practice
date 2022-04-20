@@ -14,3 +14,10 @@ const makesTen = (a, b) => {
 };
 
 console.log(makesTen());
+
+// 3. Concatenate First and Last Name into One String
+const concatName = (firstName, lastName) => {
+  return `${lastName}, ${firstName}`;
+};
+
+console.log(concatName("Joe(first name)", "Mama(last name)"));
