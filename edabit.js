@@ -21,3 +21,11 @@ const concatName = (firstName, lastName) => {
 };
 
 console.log(concatName("Joe(first name)", "Mama(last name)"));
+
+// SIDE NOTE: eval() syntax
+let x = 10;
+let y = 20;
+let text = "x * y";
+let result = eval(text);
+
+console.log(result);
