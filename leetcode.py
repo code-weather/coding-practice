@@ -58,8 +58,10 @@ def sum_of_digits(number: int) -> int:
   # Your code here
   cast_int_to_string = str(number)
 
+  init_addition = 0
   for digit_str in cast_int_to_string:
-    
+    init_addition += int(digit_str)
+  return init_addition
 
 def main():
   # Test cases
