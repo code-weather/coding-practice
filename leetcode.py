@@ -38,38 +38,79 @@
 
 ############################################################################################
 
-'''
-Problem: Add Digits of a Number
-Difficulty Rating: 2/100
+# '''
+# Problem: Add Digits of a Number
+# Difficulty Rating: 2/100
 
-Write a Python function that takes a non-negative integer and returns the sum of its digits.
+# Write a Python function that takes a non-negative integer and returns the sum of its digits.
+
+# Example:
+# Input: 123
+
+# Output: 6 (because 1 + 2 + 3 = 6)
+
+# Input: 0
+
+# Output: 0
+# '''
+
+# def sum_of_digits(number: int) -> int:
+#   # Your code here
+#   cast_int_to_string = str(number)
+
+#   init_addition = 0
+#   for digit_str in cast_int_to_string:
+#     init_addition += int(digit_str)
+#   return init_addition
+
+# def main():
+#   # Test cases
+#   test_cases = [123, 0, 56, 7, 10]
+
+#   for number in test_cases:
+#     result = sum_of_digits(number)
+#     print(f"Sum of digits in {number} is {result}")
+
+# if __name__ == "__main__":
+#   main()
+
+############################################################################################
+
+'''
+Problem: Reverse a String
+Write a Python function that takes a string and returns its reverse.
 
 Example:
-Input: 123
+Input: "hello"
 
-Output: 6 (because 1 + 2 + 3 = 6)
+Output: "olleh"
 
-Input: 0
+Input: "Python"
 
-Output: 0
+Output: "nohtyP"
 '''
 
-def sum_of_digits(number: int) -> int:
+def reverse_string(s: str) -> str:
   # Your code here
-  cast_int_to_string = str(number)
+  # return s[::-1]
+  stack = []
 
-  init_addition = 0
-  for digit_str in cast_int_to_string:
-    init_addition += int(digit_str)
-  return init_addition
+  for char in s:
+    stack.append(char)
+
+  result = ""
+  while stack:
+    result += stack.pop()
+
+  return result
 
 def main():
   # Test cases
-  test_cases = [123, 0, 56, 7, 10]
+  test_cases = ["hello", "Python", "", "a", "12321"]
 
-  for number in test_cases:
-    result = sum_of_digits(number)
-    print(f"Sum of digits in {number} is {result}")
+  for test_str in test_cases:
+    result = reverse_string(test_str)
+    print(f"The reverse of '{test_str}' is '{result}'")
 
 if __name__ == "__main__":
   main()
