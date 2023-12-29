@@ -76,41 +76,80 @@
 
 ############################################################################################
 
+# '''
+# Problem: Reverse a String
+# Write a Python function that takes a string and returns its reverse.
+
+# Example:
+# Input: "hello"
+
+# Output: "olleh"
+
+# Input: "Python"
+
+# Output: "nohtyP"
+# '''
+
+# def reverse_string(s: str) -> str:
+#   # Your code here
+#   # return s[::-1]
+#   stack = []
+
+#   for char in s:
+#     stack.append(char)
+
+#   result = ""
+#   while stack:
+#     result += stack.pop()
+
+#   return result
+
+# def main():
+#   # Test cases
+#   test_cases = ["hello", "Python", "", "a", "12321"]
+
+#   for test_str in test_cases:
+#     result = reverse_string(test_str)
+#     print(f"The reverse of '{test_str}' is '{result}'")
+
+# if __name__ == "__main__":
+#   main()
+
+############################################################################################
+
 '''
-Problem: Reverse a String
-Write a Python function that takes a string and returns its reverse.
+Problem: Find the Maximum and Minimum in a List
+Write a Python function that takes a list of numbers and returns the maximum and minimum numbers in the list.
 
 Example:
-Input: "hello"
+Input: [1, 2, 3, 4, 5]
 
-Output: "olleh"
+Output: (5, 1) (maximum is 5, minimum is 1)
 
-Input: "Python"
+Input: [-5, -4, -3, -2, -1]
 
-Output: "nohtyP"
+Output: (-1, -5) (maximum is -1, minimum is -5)
 '''
 
-def reverse_string(s: str) -> str:
+from typing import List, Tuple
+
+def find_max_min(numbers: List[int]) -> Tuple[int, int]:
   # Your code here
-  # return s[::-1]
-  stack = []
-
-  for char in s:
-    stack.append(char)
-
-  result = ""
-  while stack:
-    result += stack.pop()
-
-  return result
+  pass
 
 def main():
   # Test cases
-  test_cases = ["hello", "Python", "", "a", "12321"]
+  test_cases = [
+    [1, 2, 3, 4, 5],
+    [-5, -4, -3, -2, -1],
+    [0, 0, 0, 0, 0],
+    [10],
+    [-2, 0, 2]
+  ]
 
-  for test_str in test_cases:
-    result = reverse_string(test_str)
-    print(f"The reverse of '{test_str}' is '{result}'")
+  for case in test_cases:
+    max_num, min_num = find_max_min(case)
+    print(f"In {case}, Max: {max_num}, Min: {min_num}")
 
 if __name__ == "__main__":
   main()
