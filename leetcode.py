@@ -147,7 +147,7 @@ def find_max_min(numbers: List[int]) -> Tuple[int, int]:
     elif number < min_num:
       min_num = number
 
-  return max_num, min_num
+  return max_num, min_num # Order of multiple variable is important for the order in the tuple
 
 def main():
   # Test cases
