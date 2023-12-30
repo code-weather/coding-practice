@@ -236,8 +236,6 @@ def find_primes(n: int) -> List[int]:
   '''
   primes = []
 
-
-
 def main():
   # Test cases
   test_cases = [10, 20, 30]
