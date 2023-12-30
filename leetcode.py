@@ -210,3 +210,41 @@
 
 ############################################################################################
 
+'''
+Problem: Find All Prime Numbers Up to N
+Write a Python function that takes an integer n and returns a list of all prime numbers up to n (inclusive).
+
+Example:
+Input: 10
+
+Output: [2, 3, 5, 7]
+
+Input: 20
+
+Output: [2, 3, 5, 7, 11, 13, 17, 19]
+'''
+
+from typing import List
+
+def find_primes(n: int) -> List[int]:
+  # Your code here
+  '''
+  Pseudo code:
+  - Initalize an empty list
+  - Write some math equation (perhaps use an 'if' statement) that'll find all the prime numbers in a test case...
+  - Once I get that down, I will append the numbers into the empty list
+  '''
+  primes = []
+
+
+
+def main():
+  # Test cases
+  test_cases = [10, 20, 30]
+
+  for n in test_cases:
+    primes = find_primes(n)
+    print(f"Prime numbers up to {n}: {primes}")
+
+if __name__ == "__main__":
+  main()
