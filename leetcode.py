@@ -169,41 +169,44 @@
 
 ############################################################################################
 
-'''
-Problem: Count the Number of Vowels in a String
-Write a Python function that takes a string and returns the count of vowels in that string. For this problem, consider 'a', 'e', 'i', 'o', and 'u' as vowels (don't worry about case sensitivity).
+# '''
+# Problem: Count the Number of Vowels in a String
+# Write a Python function that takes a string and returns the count of vowels in that string. For this problem, consider 'a', 'e', 'i', 'o', and 'u' as vowels (don't worry about case sensitivity).
 
-Example:
-Input: "Hello World"
+# Example:
+# Input: "Hello World"
 
-Output: 3 (The vowels are 'e', 'o', 'o')
+# Output: 3 (The vowels are 'e', 'o', 'o')
 
-Input: "Python"
+# Input: "Python"
 
-Output: 1 (The vowel is 'o')
-'''
+# Output: 1 (The vowel is 'o')
+# '''
 
-def count_vowels(s: str) -> int:
-  # Your code here
-  count = 0
-  vowels = ["a", "e", "i", "o", "u"]
-  lower_case_str = s.lower()
+# def count_vowels(s: str) -> int:
+#   # Your code here
+#   # count = 0 # Comment out for list comprehension
+#   vowels = {"a", "e", "i", "o", "u"}
+#   lower_case_str = s.lower()
 
-  for letter in lower_case_str:
-    if vowels == letter:
-      count += 1
+#   return len([letter for letter in lower_case_str if letter in vowels])
 
-  return count
+#   # for letter in lower_case_str:
+#   #   if vowels == letter:
+#   #     count += 1
 
-def main():
-  # Test cases
-  test_cases = ["Hello World", "Python", "AEIOU", "xyz", ""]
+#   # return count
 
-  for test_str in test_cases:
-    result = count_vowels(test_str)
-    print(f"Number of vowels in '{test_str}': {result}")
+# def main():
+#   # Test cases
+#   test_cases = ["Hello World", "Python", "AEIOU", "xyz", ""]
 
-if __name__ == "__main__":
-  main()
+#   for test_str in test_cases:
+#     result = count_vowels(test_str)
+#     print(f"Number of vowels in '{test_str}': {result}")
+
+# if __name__ == "__main__":
+#   main()
 
 ############################################################################################
+
