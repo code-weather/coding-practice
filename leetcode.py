@@ -135,7 +135,19 @@ from typing import List, Tuple
 
 def find_max_min(numbers: List[int]) -> Tuple[int, int]:
   # Your code here
-  pass
+  if not numbers:
+    return (None, None)
+
+  max_num = numbers[0]
+  min_num = numbers[0]
+
+  for number in numbers:
+    if number > max_num:
+      max_num = number
+    elif number < min_num:
+      min_num = number
+
+  return max_num, min_num
 
 def main():
   # Test cases
@@ -144,7 +156,8 @@ def main():
     [-5, -4, -3, -2, -1],
     [0, 0, 0, 0, 0],
     [10],
-    [-2, 0, 2]
+    [-2, 0, 2],
+    []
   ]
 
   for case in test_cases:
