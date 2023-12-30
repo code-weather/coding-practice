@@ -117,52 +117,93 @@
 
 ############################################################################################
 
+# '''
+# Problem: Find the Maximum and Minimum in a List
+# Write a Python function that takes a list of numbers and returns the maximum and minimum numbers in the list.
+
+# Example:
+# Input: [1, 2, 3, 4, 5]
+
+# Output: (5, 1) (maximum is 5, minimum is 1)
+
+# Input: [-5, -4, -3, -2, -1]
+
+# Output: (-1, -5) (maximum is -1, minimum is -5)
+# '''
+
+# from typing import List, Tuple
+
+# def find_max_min(numbers: List[int]) -> Tuple[int, int]:
+#   # Your code here
+#   if not numbers:
+#     return (None, None)
+
+#   max_num = numbers[0]
+#   min_num = numbers[0]
+
+#   for number in numbers:
+#     if number > max_num:
+#       max_num = number
+#     elif number < min_num:
+#       min_num = number
+
+#   return max_num, min_num # Order of multiple variable is important for the order in the tuple
+
+# def main():
+#   # Test cases
+#   test_cases = [
+#     [1, 2, 3, 4, 5],
+#     [-5, -4, -3, -2, -1],
+#     [0, 0, 0, 0, 0],
+#     [10],
+#     [-2, 0, 2],
+#     []
+#   ]
+
+#   for case in test_cases:
+#     max_num, min_num = find_max_min(case)
+#     print(f"In {case}, Max: {max_num}, Min: {min_num}")
+
+# if __name__ == "__main__":
+#   main()
+
+############################################################################################
+
 '''
-Problem: Find the Maximum and Minimum in a List
-Write a Python function that takes a list of numbers and returns the maximum and minimum numbers in the list.
+Problem: Count the Number of Vowels in a String
+Write a Python function that takes a string and returns the count of vowels in that string. For this problem, consider 'a', 'e', 'i', 'o', and 'u' as vowels (don't worry about case sensitivity).
 
 Example:
-Input: [1, 2, 3, 4, 5]
+Input: "Hello World"
 
-Output: (5, 1) (maximum is 5, minimum is 1)
+Output: 3 (The vowels are 'e', 'o', 'o')
 
-Input: [-5, -4, -3, -2, -1]
+Input: "Python"
 
-Output: (-1, -5) (maximum is -1, minimum is -5)
+Output: 1 (The vowel is 'o')
 '''
 
-from typing import List, Tuple
-
-def find_max_min(numbers: List[int]) -> Tuple[int, int]:
+def count_vowels(s: str) -> int:
   # Your code here
-  if not numbers:
-    return (None, None)
+  count = 0
+  vowels = ["a", "e", "i", "o", "u"]
+  lower_case_str = s.lower()
 
-  max_num = numbers[0]
-  min_num = numbers[0]
+  for letter in lower_case_str:
+    if vowels == letter:
+      count += 1
 
-  for number in numbers:
-    if number > max_num:
-      max_num = number
-    elif number < min_num:
-      min_num = number
-
-  return max_num, min_num # Order of multiple variable is important for the order in the tuple
+  return count
 
 def main():
   # Test cases
-  test_cases = [
-    [1, 2, 3, 4, 5],
-    [-5, -4, -3, -2, -1],
-    [0, 0, 0, 0, 0],
-    [10],
-    [-2, 0, 2],
-    []
-  ]
+  test_cases = ["Hello World", "Python", "AEIOU", "xyz", ""]
 
-  for case in test_cases:
-    max_num, min_num = find_max_min(case)
-    print(f"In {case}, Max: {max_num}, Min: {min_num}")
+  for test_str in test_cases:
+    result = count_vowels(test_str)
+    print(f"Number of vowels in '{test_str}': {result}")
 
 if __name__ == "__main__":
   main()
+
+############################################################################################
